@@ -1,0 +1,7 @@
+{
+  "name": "nightlight-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
