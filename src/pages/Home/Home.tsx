@@ -12,12 +12,19 @@ import {
 } from "@ionic/react";
 import {
   playOutline as PlayOutlineIcon,
+  stopOutline as StopOutlineIcon,
   settingsOutline as SettingsOutlineIcon,
 } from "ionicons/icons";
+import { useAtom } from "jotai";
 import { useHistory } from "react-router";
+
+import Intro from "../../components/Intro";
+import { useStore } from "../../store/Store";
 
 const Home = () => {
   const history = useHistory();
+  const { enabled } = useStore();
+  const [isAppEnabled, setAppEnabled] = useAtom(enabled);
 
   return (
     <IonPage>
@@ -33,9 +40,14 @@ const Home = () => {
       </IonHeader>
 
       <IonContent>
+        {!isAppEnabled && <Intro />}
         <IonFab slot="fixed" horizontal="center" vertical="bottom">
-          <IonFabButton>
-            <IonIcon icon={PlayOutlineIcon}></IonIcon>
+          <IonFabButton onClick={() => setAppEnabled(!isAppEnabled)}>
+            {isAppEnabled ? (
+              <IonIcon icon={StopOutlineIcon}></IonIcon>
+            ) : (
+              <IonIcon icon={PlayOutlineIcon}></IonIcon>
+            )}
           </IonFabButton>
         </IonFab>
       </IonContent>
