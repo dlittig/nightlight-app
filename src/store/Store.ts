@@ -1,42 +1,36 @@
-import { atom } from "jotai";
 import {
-  STORE_SETTINGS_BATTERY_SAVING_LIMIT,
   STORE_SETTINGS_COLOR,
   STORE_SETTINGS_DISPLAY_CARE,
+  STORE_SETTINGS_MAXIMUM_BRIGHTNESS,
+  STORE_SETTINGS_BATTERY_SAVING_LIMIT,
 } from "./keys";
+import { atom } from "jotai";
+import { atomWithStorage } from "jotai/utils";
 
 const APP_KEY = "com.dlittig.nightlight-app";
 
-const fromLocalStorage = (key: string) =>
-  localStorage.getItem(`${APP_KEY}.${key}`);
-
-const toLocalStorage = (key: string, value: any) =>
-  localStorage.setItem(`${APP_KEY}.${key}`, value);
+const getFullStorageKey = (key: string) => `${APP_KEY}.${key}`;
 
 const enabled = atom(false);
 
-const colorSetting = atom(
-  () => fromLocalStorage(STORE_SETTINGS_COLOR) || "#ffffff",
-  (get, set, update) => {
-    toLocalStorage(STORE_SETTINGS_COLOR, update);
-    set(colorSetting, update);
-  }
+const colorSetting = atomWithStorage(
+  getFullStorageKey(STORE_SETTINGS_COLOR),
+  "#fff"
 );
 
-const displayCareSetting = atom(
-  () => fromLocalStorage(STORE_SETTINGS_DISPLAY_CARE) || false,
-  (get, set, update) => {
-    toLocalStorage(STORE_SETTINGS_DISPLAY_CARE, update);
-    set(colorSetting, update);
-  }
+const displayCareSetting = atomWithStorage(
+  getFullStorageKey(STORE_SETTINGS_DISPLAY_CARE),
+  "false"
 );
 
-const batterySavingLimitSetting = atom(
-  () => fromLocalStorage(STORE_SETTINGS_BATTERY_SAVING_LIMIT) || -1,
-  (get, set, update) => {
-    toLocalStorage(STORE_SETTINGS_BATTERY_SAVING_LIMIT, update);
-    set(colorSetting, update);
-  }
+const batterySavingLimitSetting = atomWithStorage(
+  getFullStorageKey(STORE_SETTINGS_BATTERY_SAVING_LIMIT),
+  "false"
+);
+
+const maximumBrightnessSetting = atomWithStorage(
+  getFullStorageKey(STORE_SETTINGS_MAXIMUM_BRIGHTNESS),
+  "false"
 );
 
 export const useStore = () => ({
@@ -44,6 +38,7 @@ export const useStore = () => ({
   colorSetting,
   displayCareSetting,
   batterySavingLimitSetting,
+  maximumBrightnessSetting,
 });
 
 export default {};
