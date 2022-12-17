@@ -21,12 +21,10 @@ import { Brightness } from "@ionic-native/brightness";
 import { useCallback, useEffect, useRef } from "react";
 
 import Intro from "../../components/Intro";
+import Light from "../../components/Light";
 import { useStore } from "../../store/Store";
 import { useWakelock } from "../../hooks/wakelock";
 import { useBatterySaver } from "../../hooks/battery";
-
-import "./style.scss";
-import Light from "../../components/Light";
 
 const Home = () => {
   const history = useHistory();
