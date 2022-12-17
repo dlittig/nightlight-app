@@ -25,19 +25,17 @@ import { useStore } from "../../store/Store";
 import { useWakelock } from "../../hooks/wakelock";
 import { useBatterySaver } from "../../hooks/battery";
 
+import "./style.scss";
+import Light from "../../components/Light";
+
 const Home = () => {
   const history = useHistory();
-  const {
-    enabled,
-    colorSetting,
-    batterySavingLimitSetting,
-    maximumBrightnessSetting,
-  } = useStore();
+  const { enabled, batterySavingLimitSetting, maximumBrightnessSetting } =
+    useStore();
   const currentBrightnessRef = useRef<number | undefined>();
   const [isAppEnabled, setAppEnabled] = useAtom(enabled);
   const [isMaxmimumBrightnessEnabled] = useAtom(maximumBrightnessSetting);
   const [batterySaverSetting] = useAtom(batterySavingLimitSetting);
-  const [color] = useAtom(colorSetting);
   const { isBatterySaverEnabled } = useBatterySaver(
     batterySaverSetting === "true"
   );
@@ -92,7 +90,8 @@ const Home = () => {
         </IonToolbar>
       </IonHeader>
 
-      <IonContent style={isActive() ? { "--background": color } : {}}>
+      <IonContent>
+        {isActive() && <Light />}
         {!isActive() && <Intro />}
         <IonFab slot="fixed" horizontal="center" vertical="bottom">
           <IonFabButton onClick={() => setAppEnabled(!isAppEnabled)}>

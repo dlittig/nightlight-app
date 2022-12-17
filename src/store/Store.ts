@@ -41,4 +41,5 @@ export const useStore = () => ({
   maximumBrightnessSetting,
 });
 
-export default {};
+const Store = {};
+export default Store;

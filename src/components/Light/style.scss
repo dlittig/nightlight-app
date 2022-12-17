@@ -1,0 +1,38 @@
+@keyframes pulsate {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.Light {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  &__pulsate {
+    animation: pulsate 30s infinite ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 1;
+  }
+}
