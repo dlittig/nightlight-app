@@ -24,6 +24,27 @@
     jsonpointer "^5.0.0"
     leven "^3.1.0"
 
+"@awesome-cordova-plugins/battery-status@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@awesome-cordova-plugins/battery-status/-/battery-status-6.2.0.tgz#a555172a1d7fa6767fb2d14f47620487b04b4056"
+  integrity sha512-ni6Tt17tyhX29Y5NWTqiVebhUS6yCA4GWubYkQrV0yrV6/kANIbYnLX5d9aoa2sSkjy0e1+TpX+e5rQO3ESrFA==
+  dependencies:
+    "@types/cordova" latest
+
+"@awesome-cordova-plugins/core@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@awesome-cordova-plugins/core/-/core-6.2.0.tgz#51422eb047f5f3e99fb1753eee2c457822e9f1c8"
+  integrity sha512-z5rKlTuQpLLPEIgzOmomQdoiRw5Sal2blh5CJRcjqh8ktspefbNC81Ni0MykPdV78/UlRORTHEzxugpcEcl1RQ==
+  dependencies:
+    "@types/cordova" latest
+
+"@awesome-cordova-plugins/insomnia@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@awesome-cordova-plugins/insomnia/-/insomnia-6.2.0.tgz#59dc443f17625c6bdc31b5c2c2270d28a2650f94"
+  integrity sha512-fQKuSIRp6m2MU6eaPbVrthmOpHwPwcPEg/BKJjr7yCp9tjxx/oMU07AMnZ+uhCQiuguNhqiC0gzEFlHt5DEE/g==
+  dependencies:
+    "@types/cordova" latest
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.16.0", "@babel/code-frame@^7.18.6", "@babel/code-frame@^7.8.3":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"
@@ -1274,6 +1295,13 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@ionic-native/brightness@^5.36.0":
+  version "5.36.0"
+  resolved "https://registry.yarnpkg.com/@ionic-native/brightness/-/brightness-5.36.0.tgz#a91a9a6a994cff659e40269d9bc7d8aea7b4b6f0"
+  integrity sha512-gv1nVxQELZVe9XahDqQtsQzjFUmU20tjp5Bybu9LChAf+zmjzo843I7BZsiVLfNkrtZuMWyskdhgXlTVPYqyyw==
+  dependencies:
+    "@types/cordova" latest
+
 "@ionic/cli-framework-output@^2.2.5":
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@ionic/cli-framework-output/-/cli-framework-output-2.2.5.tgz#0db9fba7efe0c27bb5085b12ee01f22053e44152"
@@ -2044,6 +2072,11 @@
   integrity sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==
   dependencies:
     "@types/node" "*"
+
+"@types/cordova@latest":
+  version "0.0.34"
+  resolved "https://registry.yarnpkg.com/@types/cordova/-/cordova-0.0.34.tgz#ea7addf74ecec3d7629827a0c39e2c9addc73d04"
+  integrity sha512-rkiiTuf/z2wTd4RxFOb+clE7PF4AEJU0hsczbUdkHHBtkUmpWQpEddynNfJYKYtZFJKbq4F+brfekt1kx85IZA==
 
 "@types/eslint-scope@^3.7.3":
   version "3.7.4"
@@ -3482,6 +3515,21 @@ cookie@0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
   integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
+
+cordova-plugin-battery-status@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-battery-status/-/cordova-plugin-battery-status-2.0.3.tgz#68924b329b644ddcd76b2be7ec4e00b9801effb7"
+  integrity sha512-H1vSLWbDb/qivGPVV/sjAaDnF8VEoa1uOYdrTJpYrs9vRAe3S37y8Fa5LoBuKkspWiQ5P3D8q+iTnsPF0UAO7g==
+
+cordova-plugin-brightness@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-brightness/-/cordova-plugin-brightness-0.2.0.tgz#af2b57d5f8054828a54f86bd6886d015d00293bc"
+  integrity sha512-ujW4v58jArPxPf8CjEppl9hM2/9jep1+nflzAOGoT4yc5UIuLja6j6+wxK2fv6+UWqVEWEKB3JkfnijVUl6HjQ==
+
+cordova-plugin-insomnia@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-insomnia/-/cordova-plugin-insomnia-4.3.0.tgz#832a33f6d763f0b80273bdf761b35b678c43b957"
+  integrity sha512-MdlRFsyfmf6Q/8+npDeVSTo487eyrp7vbuGO3SPbnqR94DXmFRJWLbZGwf34dMeH6GQL45baxozUwhLTPxrQwg==
 
 core-js-compat@^3.25.1:
   version "3.26.1"
@@ -8204,6 +8252,13 @@ run-parallel@^1.1.9:
   integrity sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==
   dependencies:
     queue-microtask "^1.2.2"
+
+rxjs@^7.8.0:
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.8.0.tgz#90a938862a82888ff4c7359811a595e14e1e09a4"
+  integrity sha512-F2+gxDshqmIub1KdvZkaEfGDwLNpPvk9Fs6LD/MyQxNgMds/WH9OdDDXOmxUZpME+iSK3rQCctkL0DYyytUqMg==
+  dependencies:
+    tslib "^2.1.0"
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
