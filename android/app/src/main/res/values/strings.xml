@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Nightlight</string>
+    <string name="title_activity_main">nightlight-app</string>
+    <string name="package_name">nightlight.app</string>
+    <string name="custom_url_scheme">nightlight.app</string>
+</resources>
