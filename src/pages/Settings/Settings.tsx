@@ -100,6 +100,7 @@ const Settings = () => {
               <IonToggle
                 enableOnOffLabels
                 slot="end"
+                aria-label="Prevent screen burn in"
                 checked={displayCare === "true"}
                 onIonChange={(e) => setDisplayCare(`${e.detail.checked}`)}
               ></IonToggle>
@@ -114,6 +115,7 @@ const Settings = () => {
               <IonToggle
                 enableOnOffLabels
                 slot="end"
+                aria-label="Battery save mode"
                 checked={battery === "true"}
                 onIonChange={(e) => setBattery(`${e.detail.checked}`)}
               ></IonToggle>
@@ -125,6 +127,7 @@ const Settings = () => {
               <IonToggle
                 enableOnOffLabels
                 slot="end"
+                aria-label="Use maximum screen brightness"
                 checked={useMaximumBrightness === "true"}
                 onIonChange={(e) => {
                   setUseMaximumBrightness(`${e.detail.checked}`);
